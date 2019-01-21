@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Train Schedule</title>
-  </head>
-  
-  <body>
-    <p>This is a test.</p>
-  </body>
+
+<head>
+  <title>Train Schedule</title>
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+</head>
+
+<body>
+  <div class="container this-container">
+    <div class="card">
+      <div>Add a Train</div>
+      <br>
+      <form>
+        <div class="form-group">
+          <label for="train">Train Name</label>
+          <input type="text" class="form-control" id="train-input">
+        </div>
+        <div class="form-group">
+          <label for="destination">Destination</label>
+          <input type="text" class="form-control" id="destination-input">
+        </div>
+        <div class="form-group">
+          <label for="maidenDeparture">First Train Time(HH:mm - Military Time)</label>
+          <input type="text" class="form-control" id="maidenDeparture-input">
+        </div>
+        <div class="form-group">
+          <label for="frequency">Frequency (min)</label>
+          <input type="text" class="form-control" id="frequency-input">
+        </div>
+
+      </form>
+      <button type="button" class="btn btn-primary button-1" id="submit">Submit</button>
+    </div>
+  </div>
+  <br>
+  <div id="allTrains"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+  <script type="text/javascript" src="assets/script.js"></script>
+</body>
+
 </html>
